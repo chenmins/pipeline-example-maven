@@ -4,7 +4,7 @@ stages:
   - runScriptConfig:
       image: harbor.chenmin.org/library/maven:3-jdk-7
       shellScript: |-
-        mvn clean install
+        mvn -Dmaven.test.skip=true clean install
 - name: Publish
   steps:
   - publishImageConfig:
